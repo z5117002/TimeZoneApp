@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/Beijing"
+        app:layout_constraintTop_toBottomOf="@+id/Beijing"
+        tools:context=".MainActivity">
+
+
+        <include
+            android:id="@+id/Sydney"
+            layout="@layout/city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/sydney" />
+
+        <include
+            android:id="@+id/LosAngeles"
+            layout="@layout/losangeles"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Moscow"
+            app:layout_constraintStart_toStartOf="@+id/Moscow" />
+
+
+        <include
+            android:id="@+id/Beijing"
+            layout="@layout/beijing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@+id/NewYork"
+            app:layout_constraintTop_toBottomOf="@+id/NewYork" />
+
+        <include
+            android:id="@+id/NewYork"
+            layout="@layout/newyork"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@+id/Sydney"
+            app:layout_constraintTop_toBottomOf="@+id/Sydney" />
+
+        <include
+            android:id="@+id/Moscow"
+            layout="@layout/moscow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@+id/London"
+            app:layout_constraintTop_toBottomOf="@+id/London" />
+
+        <include
+            android:id="@+id/London"
+            layout="@layout/london"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/Moscow"
+            app:layout_constraintEnd_toEndOf="@+id/Beijing"
+            app:layout_constraintTop_toBottomOf="@+id/Beijing" />
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
